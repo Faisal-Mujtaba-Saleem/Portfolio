@@ -1,5 +1,5 @@
 import React from 'react'
-import rightArrow from '../assets/rightArrow.svg'
+import rightArrow from '../assets/rightArrowBright.svg'
 
 const Works = () => {
   const worksCards = [
