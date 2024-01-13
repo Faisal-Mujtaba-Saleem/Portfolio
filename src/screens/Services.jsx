@@ -10,32 +10,32 @@ const Services = () => {
     const servicesCards = [
         {
             serviceHeading: `Web Development`,
-            serviceContent: ``,
+            serviceContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima possimus nam.`,
             serviveSvg: monitoringGraphSvg
         },
         {
             serviceHeading: `UX Designs`,
-            serviceContent: ``,
+            serviceContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima possimus nam.`,
             serviveSvg: editSvg
         },
         {
             serviceHeading: `UI Designs`,
-            serviceContent: ``,
+            serviceContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima possimus nam.`,
             serviveSvg: peopleSvg
         },
         {
             serviceHeading: `Graphic Designing`,
-            serviceContent: ``,
+            serviceContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima possimus nam.`,
             serviveSvg: globeSvgSvg
         },
         {
             serviceHeading: `Animation`,
-            serviceContent: ``,
+            serviceContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima possimus nam.`,
             serviveSvg: tagSvg
         },
         {
             serviceHeading: `Digital Marketing`,
-            serviceContent: ``,
+            serviceContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima possimus nam.`,
             serviveSvg: mediaGraphSvg
         },
     ]
@@ -67,7 +67,7 @@ const Services = () => {
                                         <h2 className="text-lg text-white font-medium title-font mb-2">
                                             {serviceCard.serviceHeading}
                                         </h2>
-                                        <p className="leading-relaxed text-base ">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                                        <p className="leading-relaxed text-base ">{serviceCard.serviceContent}</p>
                                     </div>
                                 </div>
                             )

@@ -10,17 +10,17 @@ const Home = () => {
     const featuresCards = [
         {
             featureHeading: `Future Concept`,
-            featureContent: ``,
+            featureContent: `Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.`,
             featureSvg: plainSvg
         },
         {
             featureHeading: `The Big Ideas`,
-            featureContent: ``,
+            featureContent: `Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.`,
             featureSvg: brainSvg
         },
         {
             featureHeading: `Creative Solutions`,
-            featureContent: ``,
+            featureContent: `Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.`,
             featureSvg: bulbSvg
         }
     ]
@@ -69,7 +69,7 @@ const Home = () => {
                                                 </h2>
                                             </div>
                                             <div className="flex-grow">
-                                                <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                                                <p className="leading-relaxed text-base">{featuresCard.featureContent}</p>
                                             </div>
                                         </div>
                                     </div>
