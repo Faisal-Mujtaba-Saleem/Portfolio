@@ -16,11 +16,11 @@ import {
 } from "react-router-dom";
 
 function App() {
-
+  const appName = "I-TechStudio";
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header appName={appName} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
@@ -29,7 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {
             localStorage.getItem("credentials") &&
-            <Route path="/inquiry-response" element={<InquiryResponse />} />
+            <Route path="/inquiry-response" element={<InquiryResponse appName={appName} />} />
           }
           {/* Not Found Route  */}
           <Route path="*" element={<NotFound />} />
