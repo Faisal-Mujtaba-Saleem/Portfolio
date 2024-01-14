@@ -1,5 +1,6 @@
 import React from 'react'
 import rightArrow from '../assets/rightArrowBright.svg'
+import { Link } from 'react-router-dom'
 
 const Works = () => {
   const worksCards = [
@@ -59,12 +60,12 @@ const Works = () => {
                   <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                     {worksCard.description}
                   </p>
-                  <a href={worksCard.caseStudyLink.href} title=""
+                  <Link href={worksCard.caseStudyLink.href} title=""
                     className="text-white bg-blue-600 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 hover:bg-blue-700 dark:focus:ring-primary-800"
                     role="button">
                     {worksCard.caseStudyLink.text}
                     <img className='ml-2' src={rightArrow} alt="Right Arrow" />
-                  </a>
+                  </Link>
                 </div>
               )
             })

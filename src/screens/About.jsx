@@ -4,16 +4,16 @@ import Testimonials from '../components/Testimonials'
 const About = () => {
   const aboutCards = [
     {
-      aboutHeading: `Who we are`,
-      aboutContent: ``
+      aboutCardHeading: `Who we are`,
+      aboutCardContent: `Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.`
     },
     {
-      aboutHeading: `Our philosophy`,
-      aboutContent: ``
+      aboutCardHeading: `Our philosophy`,
+      aboutCardContent: `Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.`
     },
     {
-      aboutHeading: `How we work`,
-      aboutContent: ``
+      aboutCardHeading: `How we work`,
+      aboutCardContent: `Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.`
     }
   ]
   return (
@@ -29,8 +29,8 @@ const About = () => {
               aboutCards.map((aboutCard, index) => {
                 return (
                   <div key={index} className={`xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 ${!!index && `border-l-2 border-teal-800`}`}>
-                    <h2 className="text-lg sm:text-xl text-white font-medium title-font mb-2">{aboutCard.aboutHeading}</h2>
-                    <p className="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                    <h2 className="text-lg sm:text-xl text-white font-medium title-font mb-2">{aboutCard.aboutCardHeading}</h2>
+                    <p className="leading-relaxed text-base mb-4">{aboutCard.aboutCardContent}</p>
                   </div>
                 )
               })

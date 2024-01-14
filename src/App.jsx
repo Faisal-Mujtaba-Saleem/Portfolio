@@ -1,12 +1,13 @@
+import Footer from './components/Footer';
 import Header from './components/Header'
+
+import Home from './screens/Home'
 import About from './screens/About';
 import Contact from './screens/Contact';
-import Home from './screens/Home'
 import Services from './screens/Services';
-
 import Works from './screens/Works';
-import Footer from './components/Footer';
 import NotFound from './screens/NotFound';
+import InquiryResponse from './screens/InquiryResponse';
 
 import {
   BrowserRouter,
@@ -26,7 +27,10 @@ function App() {
           <Route path="/works" element={<Works />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-
+          {
+            localStorage.getItem("credentials") &&
+            <Route path="/inquiry-response" element={<InquiryResponse />} />
+          }
           {/* Not Found Route  */}
           <Route path="*" element={<NotFound />} />
         </Routes>
