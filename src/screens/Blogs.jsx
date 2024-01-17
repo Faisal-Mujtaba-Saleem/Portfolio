@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { AlertContext } from '../contexts/AlertContexts/AlertContext';
 import Posts from '../components/Posts';
-import Spinner from '../components/Spinner';
-import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Blogs = (props) => {
     // States 
