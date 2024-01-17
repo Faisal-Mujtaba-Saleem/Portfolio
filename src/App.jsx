@@ -10,13 +10,13 @@ import Works from './screens/Works';
 import Blogs from './screens/Blogs';
 import NotFound from './screens/NotFound';
 import InquiryResponse from './screens/InquiryResponse';
+import SinglePost from './screens/SinglePost';
 
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import SinglePost from './screens/SinglePost';
 
 function App() {
   const appName = "I-Techstudio";
