@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import MediaLinks from '../components/MediaLinks';
 import { json, useNavigate } from 'react-router-dom';
+import { AlertContext } from '../contexts/AlertContexts/AlertContext';
 
 const Contact = () => {
     const navigate = useNavigate();
+
+    const { showAlert } = useContext(AlertContext);
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [credentials, setCredentials] = useState([]);
-
 
     const handleCredentialChange = (e) => {
         switch (e.target.name) {
@@ -52,7 +54,11 @@ const Contact = () => {
             navigate("/inquiry-response")
         }
         else {
-            alert("Invalid Credentials!");
+            showAlert("Invalid or empty credentials", "warning");
+            window.scrollTo({
+                top: 0,
+                behaviour: 'smooth'
+            })
         }
     }
 
@@ -64,11 +70,11 @@ const Contact = () => {
     const mediaNames = ["facebook", "twitter", 'instagram', "messanger"];
     return (
         <section className="text-gray-400 bg-gray-900 body-font relative">
-            <div className="container px-5 py-24 mx-auto">
+            <div className="container px-5 py-20 mx-auto">
                 <div className="flex flex-col text-center w-full mb-12">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Contact Us</h1>
                     <p className="mb-4 text-base font-semibold text-teal-500 sm:text-xl dark:text-gray-400">
-                        Connect with us for seamless digital solutions. Your success is our priority!.</p>
+                        Connect with us for seamless digital solutions. Your success is our priority!</p>
                 </div>
                 <div className="lg:w-1/2 md:w-2/3 mx-auto">
                     <div className="flex flex-wrap -m-2">
@@ -94,9 +100,9 @@ const Contact = () => {
                             <button type='button' className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" onClick={handleSubmitClick}>Submit</button>
                         </div>
                         <div className="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
-                            <a href='https://www.gmail.com/' className="text target='_blank'-indigo-400">example@email.com</a>
-                            <p className="leading-normal my-5">49 Smith St.
-                                <br />Saint Cloud, MN 56301
+                            <a href='https://www.gmail.com/' className="text target='_blank'-indigo-400">faisalmujtaba2005@gmail.com</a>
+                            <p className="leading-normal my-4">Nizam Uddin Aolia Road, Block 5 KAECHS,
+                                <br /> Karachi, Karachi City, Sindh
                             </p>
                             <span className="inline-flex">
                                 <MediaLinks mediaNames={mediaNames} />

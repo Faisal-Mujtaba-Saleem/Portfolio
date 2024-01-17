@@ -1,11 +1,13 @@
-import Footer from './components/Footer';
 import Header from './components/Header'
+import Footer from './components/Footer';
+import InfoAlert from './components/Alert';
 
 import Home from './screens/Home'
 import About from './screens/About';
 import Contact from './screens/Contact';
 import Services from './screens/Services';
 import Works from './screens/Works';
+import Blogs from './screens/Blogs';
 import NotFound from './screens/NotFound';
 import InquiryResponse from './screens/InquiryResponse';
 
@@ -14,18 +16,24 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import SinglePost from './screens/SinglePost';
 
 function App() {
-  const appName = "I-TechStudio";
+  const appName = "I-Techstudio";
+  const apiKey = "AIzaSyAD8e-ItqTkjfYwVKW3CxApv8p43np353U";
+  const results = 10;
   return (
     <>
       <BrowserRouter>
         <Header appName={appName} />
+        <InfoAlert />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/works" element={<Works />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blogs" element={<Blogs apiKey={apiKey} results={results} />} />
+          <Route path="/blogPost/:postId" element={<SinglePost apiKey={apiKey} />} />
           <Route path="/contact" element={<Contact />} />
           {
             localStorage.getItem("credentials") &&
@@ -34,7 +42,7 @@ function App() {
           {/* Not Found Route  */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        <Footer appName={appName} />
       </BrowserRouter>
     </>
   )
