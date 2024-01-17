@@ -72,11 +72,13 @@ const Blogs = (props) => {
     }, [blogPosts]);
 
     useEffect(() => {
-        showAlert(fetchError, 'Error');
-        window.scrollTo({
-            top: 0,
-            behaviour: "smooth"
-        })
+        if (fetchError) {
+            showAlert(fetchError, 'Error');
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
     }, [fetchError]);
 
     return (
