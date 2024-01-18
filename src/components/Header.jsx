@@ -51,7 +51,7 @@ const Header = (props) => {
                         })
                     }
                 </nav>
-                <button className="inline-flex items-center bg-gray-800 border-2 border-teal-600 ml-2 py-3 px-4 focus:outline-none hover:bg-gray-700 rounded text-base font-bold md:mt-0" onClick={e => navigate("/contact")}>CONTACT
+                <button className="inline-flex items-center bg-gray-800 border-2 border-teal-600 ml-6 py-3 px-4 focus:outline-none hover:bg-gray-700 rounded text-base font-bold md:mt-0" onClick={e => navigate("/contact")}>CONTACT
                     <img src={rightArrow} alt="Right Arrow" className='ml-1 text-white' />
                 </button>
             </div>
