@@ -20,7 +20,6 @@ const Testimonials = () => {
             content: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique consequuntur praesentium facilis harum minus nihil ab, quaerat nobis saepe dolore, voluptate aperiam repellat eveniet ullam et, asperiores explicabo qui! Corrupti repellat voluptas similique dolorem suscipit in ipsum hic, placeat quas.",
             img: ``
         },
-
     ]
     return (
         <section className="text-gray-400 bg-gray-900 body-font">

@@ -44,7 +44,7 @@ const Header = (props) => {
                     {
                         routes.map((route, index) => {
                             return (
-                                <Link key={index} className={`hover:text-white border-0 ${location.pathname === route.path && `border-b-2 border-b-teal-500`} py-2 px-4 font-bold cursor-pointer`} to={route.path}>
+                                <Link key={index} className={`hover:text-white ${location.pathname === route.path && `border-b-2 border-b-teal-500`} py-2 px-4 font-bold cursor-pointer`} to={route.path}>
                                     {route.label}
                                 </Link>
                             )

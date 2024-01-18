@@ -89,9 +89,9 @@ const Blogs = (props) => {
                                 <path d="M21 21l-5.2-5.2"></path>
                                 <circle cx="10" cy="10" r="8"></circle>
                             </svg>
-                        </button>
+                           </button>
                     </span>
-                    <input type="search" name="search" placeholder="Search" className="py-2 text-sm text-white bg-gray-800 rounded-md pl-10 focus:outline-none focus:bg-gray-700 h-10" hidden={hideSearchbar} value={searchInputValue} onChange={(e) => { setSearchInputValue(e.target.value) }} title='You can search through category, date, or heading in this blog template.' />
+                    <input type="search" name="search" placeholder="Search" className="py-2 px-6 ml-1 text-sm text-white bg-gray-800 rounded-md pl-10 focus:outline-none focus:bg-gray-700 h-10" hidden={hideSearchbar} value={searchInputValue} onChange={(e) => { setSearchInputValue(e.target.value) }} title='You can search through category, date, or heading in this blog template.' />
                 </div>
                 <h1 className="text-4xl font-medium text-white title-font mb-2">Blogger's Blog</h1>
                 {

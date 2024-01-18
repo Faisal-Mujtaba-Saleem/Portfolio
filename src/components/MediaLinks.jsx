@@ -1,15 +1,14 @@
-import React from 'react'
-import facebookSvg from '../assets/Media_Links Svgs/facebookSvg.svg'
-import instagramSvg from '../assets/Media_Links Svgs/instagramSvg.svg'
-import twitterSvg from '../assets/Media_Links Svgs/twitterSvg.svg'
-import messangerSvg from '../assets/Media_Links Svgs/messangerSvg.svg'
-import linkedinSvg from '../assets/Media_Links Svgs/linkedinSvg.svg'
+import React from 'react';
+import facebookSvg from '../assets/Media_Links Svgs/facebookSvg.svg';
+import instagramSvg from '../assets/Media_Links Svgs/instagramSvg.svg';
+import twitterSvg from '../assets/Media_Links Svgs/twitterSvg.svg';
+import messangerSvg from '../assets/Media_Links Svgs/messangerSvg.svg';
+import linkedinSvg from '../assets/Media_Links Svgs/linkedinSvg.svg';
 
 const MediaLinks = (props) => {
     const { mediaNames } = props;
 
     const mediaLinks = mediaNames.map((mediaName) => {
-
         return {
             linkHref: `https://www.${mediaName}.com/`,
             linkTarget: '_blank',

@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import Footer from './components/Footer';
-import InfoAlert from './components/Alert';
+import Alert from './components/Alert';
 
 import Home from './screens/Home'
 import About from './screens/About';
@@ -26,7 +26,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header appName={appName} />
-        <InfoAlert />
+        <Alert />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import { AlertContext } from '../contexts/AlertContexts/AlertContext';
 
 const FeedBack = () => {
-    const feedbackRef = useRef();
+    const feedbackRef = useRef(null);
     const { showAlert } = useContext(AlertContext);
 
     const onSubmitFeedback = (e) => {
-        if (!!feedbackRef.current.value && feedbackRef.current.value <= 3) {
+        if (!!feedbackRef.current.value && feedbackRef.current.value.length >= 4) {
             localStorage.setItem('user_feedback', feedbackRef.current.value);
             showAlert("Feedback Submitted, Thank you for sharing your thoughts with us.", "info");
             window.scrollTo({

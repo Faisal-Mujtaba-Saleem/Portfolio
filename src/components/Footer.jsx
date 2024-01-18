@@ -72,7 +72,6 @@ const Footer = (props) => {
         ]
 
     }
-
     const mediaNames = ["facebook", "twitter", 'instagram', "linkedin"];
     return (
         <footer className="text-gray-400 bg-gray-900 body-font border-t border-teal-600">
