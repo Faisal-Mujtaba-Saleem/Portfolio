@@ -8,23 +8,35 @@ import linkedinSvg from '../assets/Media_Links Svgs/linkedinSvg.svg';
 const MediaLinks = (props) => {
     const { mediaNames } = props;
 
-    const mediaLinks = mediaNames.map((mediaName) => {
-        return {
-            linkHref: `https://www.${mediaName}.com/`,
-            linkTarget: '_blank',
-            linkSvg: eval(`${mediaName}Svg`),
-            linkAlt: mediaName
-        }
-    })
-    return (
-        mediaLinks.map((mediaLink, index) => {
-            return (
-                <a key={index} href={mediaLink.linkHref} target={mediaLink.linkTarget} className="text-gray-500 mx-1" >
-                    <img src={mediaLink.linkSvg} alt={mediaLink.linkAlt} />,
-                </a>
-            )
-        })
-    )
-}
+    const mediaLinks = mediaNames.map((mediaName) => ({
+        linkHref: `https://www.${mediaName}.com/`,
+        linkTarget: '_blank',
+        linkSvg: getMediaSvg(mediaName),
+        linkAlt: mediaName,
+    }));
 
-export default MediaLinks
+    return mediaLinks.map((mediaLink, index) => (
+        <a key={index} href={mediaLink.linkHref} target={mediaLink.linkTarget} className="text-gray-500 mx-1">
+            <img src={mediaLink.linkSvg} alt={mediaLink.linkAlt} />
+        </a>
+    ));
+};
+
+const getMediaSvg = (mediaName) => {
+    switch (mediaName) {
+        case 'facebook':
+            return facebookSvg;
+        case 'instagram':
+            return instagramSvg;
+        case 'twitter':
+            return twitterSvg;
+        case 'messanger':
+            return messangerSvg;
+        case 'linkedin':
+            return linkedinSvg;
+        default:
+            return null;
+    }
+};
+
+export default MediaLinks;
