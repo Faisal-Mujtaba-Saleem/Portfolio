@@ -1,0 +1,1 @@
+export const BlogSApiBaseUrl = `https://www.googleapis.com/blogger/v3/blogs/2399953/posts`;

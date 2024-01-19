@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { AlertContext } from '../contexts/AlertContexts/AlertContext';
 import Posts from '../components/Posts';
+import { BlogSApiBaseUrl } from '../Constants';
 
 const Blogs = (props) => {
     // States 
@@ -36,7 +37,7 @@ const Blogs = (props) => {
     };
 
     const handleLoadMore = () => {
-        let url = `https://www.googleapis.com/blogger/v3/blogs/2399953/posts?key=${props.apiKey}&maxResults=${props?.results}&nextPageToken=${nextPageToken}`;
+        let url = `${BlogSApiBaseUrl}?key=${props.apiKey}&maxResults=${props?.results}&nextPageToken=${nextPageToken}`;
         getBlogPosts(url)
     }
 
@@ -89,7 +90,7 @@ const Blogs = (props) => {
                                 <path d="M21 21l-5.2-5.2"></path>
                                 <circle cx="10" cy="10" r="8"></circle>
                             </svg>
-                           </button>
+                        </button>
                     </span>
                     <input type="search" name="search" placeholder="Search" className="py-2 px-6 ml-1 text-sm text-white bg-gray-800 rounded-md pl-10 focus:outline-none focus:bg-gray-700 h-10" hidden={hideSearchbar} value={searchInputValue} onChange={(e) => { setSearchInputValue(e.target.value) }} title='You can search through category, date, or heading in this blog template.' />
                 </div>

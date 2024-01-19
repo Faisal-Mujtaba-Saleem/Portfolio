@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import facebookSvg from '../assets/Media_Links Svgs/facebookSvg.svg'
-import instagramSvg from '../assets/Media_Links Svgs/instagramSvg.svg'
-import twitterSvg from '../assets/Media_Links Svgs/twitterSvg.svg'
-import linkedinSvg from '../assets/Media_Links Svgs/linkedinSvg.svg'
 import MediaLinks from './MediaLinks'
 import FeedBack from './FeedBack'
 

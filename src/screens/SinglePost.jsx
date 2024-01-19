@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import leftArrow from '../assets/leftArrow.svg';
+import { BlogSApiBaseUrl } from '../Constants';
 
 const SinglePost = (props) => {
     const [post, setPost] = useState({});
@@ -25,7 +26,7 @@ const SinglePost = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            let url = `https://www.googleapis.com/blogger/v3/blogs/2399953/posts/${postId}?key=${props.apiKey}`;
+            let url = `${BlogSApiBaseUrl}/${postId}?key=${props.apiKey}`;
             await getPost(url);
         };
 
