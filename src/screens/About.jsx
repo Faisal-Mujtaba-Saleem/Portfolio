@@ -28,7 +28,7 @@ const About = () => {
             {
               aboutCards.map((aboutCard, index) => {
                 return (
-                  <div key={index} className={`xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 ${!!index && `border-l-2 border-teal-800`}`}>
+                  <div key={index} className={`xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-b-2 border-teal-800 ${!!index && `lg:border-l-2 lg:border-teal-800`}`}>
                     <h2 className="text-lg sm:text-xl text-white font-medium title-font mb-2">{aboutCard.aboutCardHeading}</h2>
                     <p className="leading-relaxed text-base mb-4">{aboutCard.aboutCardContent}</p>
                   </div>
