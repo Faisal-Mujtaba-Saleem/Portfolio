@@ -86,7 +86,7 @@ const Footer = (props) => {
                                                 })[0]
                                             ].map((categoryLink, index) => {
                                                 return (
-                                                    <li key={index}>
+                                                    <li key={index} className=' '>
                                                         <Link to={categoryLink.linkHref} target={categoryLink.linkTarget} className="text-gray-400 hover:text-white">{categoryLink.linkLabel}</Link>
                                                     </li>
                                                 )
@@ -103,7 +103,7 @@ const Footer = (props) => {
             <div className="border-t border-teal-600">
                 <div className="container px-5 py-8 flex flex-wrap mx-auto items-center">
                     {<FeedBack />}
-                    <span className="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
+                    <span className="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto ">
                         <span className="inline-flex">
                             <MediaLinks mediaNames={mediaNames} />
                         </span>
