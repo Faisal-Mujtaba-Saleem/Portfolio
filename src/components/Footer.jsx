@@ -76,8 +76,8 @@ const Footer = (props) => {
                     {
                         linksCategories.map((linksCategory, index) => {
                             return (
-                                <div key={linksCategory.categoryName} className="lg:w-1/6 md:w-1/2 w-full px-4 mx-24">
-                                    <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">{linksCategory.categoryName}</h2>
+                                <div key={linksCategory.categoryName} className="lg:w-1/6 md:w-1/2 w-full px-4 sm:mx-24">
+                                    <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3 text-center lg:!text-left">{linksCategory.categoryName}</h2>
                                     <nav className="list-none mb-10">
                                         {
                                             categoriesLinks[
@@ -86,7 +86,7 @@ const Footer = (props) => {
                                                 })[0]
                                             ].map((categoryLink, index) => {
                                                 return (
-                                                    <li key={index} className=' '>
+                                                    <li key={index} className=' text-center lg:!text-left break-words py-1'>
                                                         <Link to={categoryLink.linkHref} target={categoryLink.linkTarget} className="text-gray-400 hover:text-white">{categoryLink.linkLabel}</Link>
                                                     </li>
                                                 )
