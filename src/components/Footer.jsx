@@ -92,7 +92,12 @@ const Footer = (props) => {
                                             ].map((categoryLink, index) => {
                                                 return (
                                                     <li key={index} className=' text-center lg:!text-left break-words py-1'>
-                                                        <Link to={categoryLink.linkHref} target={categoryLink.linkTarget} className="text-gray-400 hover:text-white">{categoryLink.linkLabel}</Link>
+                                                        <Link to={categoryLink.linkHref} target={categoryLink.linkTarget} className="text-gray-400 hover:text-white" onClick={() => {
+                                                            window.scrollTo({
+                                                                top: 0,
+                                                                behavior: 'smooth'
+                                                            })
+                                                        }}>{categoryLink.linkLabel}</Link>
                                                     </li>
                                                 )
                                             })
