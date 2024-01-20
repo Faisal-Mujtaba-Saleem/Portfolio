@@ -61,6 +61,11 @@ const Footer = (props) => {
                 linkLabel: `About`
             },
             {
+                linkHref: `/blogs`,
+                linkTarget: `_self`,
+                linkLabel: `Blogs`
+            },
+            {
                 linkHref: `/contact`,
                 linkTarget: `_self`,
                 linkLabel: `Contact Us`
