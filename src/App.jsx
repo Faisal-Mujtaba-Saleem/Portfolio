@@ -20,7 +20,7 @@ import {
 
 function App() {
   const appName = "I-Techstudio";
-  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey = import.meta.env.VITE_API_KEY";
   const results = 10;
   return (
     <>
