@@ -16,6 +16,10 @@ const Posts = ({ blogItem }) => {
 
     const handleViewPost = (postId) => {
         navigate(`/blogPost/${postId}`);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
     }
 
     return (
