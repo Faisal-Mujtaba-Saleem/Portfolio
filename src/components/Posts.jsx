@@ -20,7 +20,7 @@ const Posts = ({ blogItem }) => {
 
     return (
         <div className="my-8 divide-y-2 divide-gray-800 border-b-2 border-gray-400">
-            <div className="py-8 flex flex-wrap md:flex-nowrap">
+            <div className="py-8 flex flex-wrap md:flex-nowrap flex-col">
                 <div className="md:w-64 md:my-6 my-6 flex-shrink-0 flex flex-col">
                     <span className="font-semibold title-font text-white bg-slate-600 my-2 py-2 rounded-md w-28 text-center cursor-pointer">{blogItem?.author?.displayName}</span>
                     <span className="mt-1 text-gray-500 text-sm text-center w-28">{new Date(blogItem?.published).toDateString()}</span>
