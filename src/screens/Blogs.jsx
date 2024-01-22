@@ -43,7 +43,6 @@ const Blogs = (props) => {
     const handleLoadMore = () => {
         let url = `${BlogSApiBaseUrl}?key=${props.apiKey}&maxResults=${props?.results}&pageToken=${nextPageToken}`;
         getBlogPosts(url);
-        console.log(blogPosts);
     }
 
     // Searchbar Funtionality 
@@ -119,7 +118,7 @@ const Blogs = (props) => {
                         return !isLoading &&
                             (
                                 <React.Fragment key={index}>
-                                    <h2 className="font-bold text-2xl text-white md:mt-24 mt-24 py-2 rounded-xl w-36 text-center border-y-2 border-y-teal-400 border-x-2 border-x-teal-900 hover:bg-slate-600 cursor-pointer">{category}</h2>
+                                    <h2 className="font-bold text-2xl text-white md:mt-24 mt-24 py-2 px-2 rounded-xl w-40 text-center border-y-2 border-y-teal-400 border-x-2 border-x-teal-900 hover:bg-slate-600 cursor-pointer">{category}</h2>
                                     {
                                         blogPosts?.items?.filter((blogItem) => {
                                             return blogItem?.author?.displayName === category && didSearchIncludes(blogItem?.title, new Date(blogItem?.published).toDateString(), category)
