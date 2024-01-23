@@ -97,7 +97,7 @@ const Blogs = (props) => {
         <section className="text-gray-400 bg-gray-900 body-font overflow-hidden">
             <div className="container px-5 py-24 mx-auto">
                 <div className="text-gray-600 focus-within:text-gray-400 flex w-full sm:!h-full sm:!flex-row flex-col justify-between" style={{
-                    height: "30vh"
+                    height: "40vh"
                 }}>
                     <h1 className="text-4xl font-medium text-white title-font mb-2">Blogger's Blog</h1>
 
@@ -116,7 +116,7 @@ const Blogs = (props) => {
                         return !isLoading &&
                             (
                                 <React.Fragment key={index}>
-                                    <h2 className="font-bold text-2xl text-white md:mt-24 mt-24 py-2 px-2 rounded-xl w-40 text-center border-y-2 border-y-teal-400 border-x-2 border-x-teal-900 hover:bg-slate-600 cursor-pointer">{category}</h2>
+                                    <h2 className="font-bold text-2xl text-white md:mt-20 mt-24 py-2 px-2 rounded-xl w-40 text-center border-y-2 border-y-teal-400 border-x-2 border-x-teal-900 hover:bg-slate-600 cursor-pointer">{category}</h2>
                                     {
                                         blogPosts?.items?.filter((blogItem) => {
                                             return blogItem?.author?.displayName === category && didSearchIncludes(blogItem?.title, new Date(blogItem?.published).toDateString(), category)
