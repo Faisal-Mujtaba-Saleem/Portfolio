@@ -52,13 +52,7 @@ const Blogs = (props) => {
     }
 
     // Searchbar Funtionality 
-    const didSearchIncludes = (title, publisheDate, category) => {
-        const condition = title.toLowerCase().includes(searchInputValue.toLowerCase()) || publisheDate.toLowerCase().includes(searchInputValue.toLowerCase()) || category.toLowerCase().includes(searchInputValue.toLowerCase())
-
-        console.log(condition);
-
-        return condition
-    }
+    const didSearchIncludes = (title, publisheDate, category) => title.toLowerCase().includes(searchInputValue.toLowerCase()) || publisheDate.toLowerCase().includes(searchInputValue.toLowerCase()) || category.toLowerCase().includes(searchInputValue.toLowerCase())
 
     // SearchBar Handler 
     const handleSearchbar = (e) => {
