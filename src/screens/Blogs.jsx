@@ -22,17 +22,20 @@ const Blogs = (props) => {
     const getBlogPosts = async (url) => {
         try {
             setIsLoadingMore(true);
+
             let fetchedBlogPosts = await fetch(url);
             fetchedBlogPosts = await fetchedBlogPosts.json();
 
-            setBlogPosts((prevBlogPosts) => {
-                return {
-                    ...fetchedBlogPosts,
-                    items: !!prevBlogPosts?.items ?
-                        [...prevBlogPosts?.items, ...fetchedBlogPosts.items] :
-                        [...fetchedBlogPosts.items]
+            setBlogPosts(
+                (prevBlogPosts) => {
+                    return {
+                        ...fetchedBlogPosts,
+                        items: !!prevBlogPosts?.items ?
+                            [...prevBlogPosts?.items, ...fetchedBlogPosts.items] :
+                            [...fetchedBlogPosts.items]
+                    }
                 }
-            });
+            );
             setNextPageToken(fetchedBlogPosts.nextPageToken);
         } catch (error) {
             console.log(error);
@@ -50,7 +53,11 @@ const Blogs = (props) => {
 
     // Searchbar Funtionality 
     const didSearchIncludes = (title, publisheDate, category) => {
-        return title.toLowerCase().includes(searchInputValue.toLowerCase()) || publisheDate.toLowerCase().includes(searchInputValue.toLowerCase()) || category.toLowerCase().includes(searchInputValue.toLowerCase())
+        const condition = title.toLowerCase().includes(searchInputValue.toLowerCase()) || publisheDate.toLowerCase().includes(searchInputValue.toLowerCase()) || category.toLowerCase().includes(searchInputValue.toLowerCase())
+
+        console.log(condition);
+
+        return condition
     }
 
     // SearchBar Handler 
@@ -95,13 +102,11 @@ const Blogs = (props) => {
 
     return (
         <section className="text-gray-400 bg-gray-900 body-font overflow-hidden">
-            <div className="container px-5 py-24 mx-auto">
-                <div className="text-gray-600 focus-within:text-gray-400 flex w-full sm:!h-full sm:!flex-row flex-col justify-between" style={{
-                    height: "40vh"
-                }}>
-                    <h1 className="text-4xl font-medium text-white title-font mb-2">Blogger's Blog</h1>
+            <div className="container px-5 mx-auto">
+                <div className="text-gray-600 focus-within:text-gray-400 flex w-full sm:!h-full sm:!flex-row flex-col justify-between">
+                    <h1 className="text-4xl font-medium text-white title-font mt-20">Blogger's Blog</h1>
 
-                    <span className="flex items-center pl-2">
+                    <span className="flex items-center py-10 ">
                         <button type="submit" className="p-1 focus:outline-none focus:shadow-outline" onClick={handleSearchbar}>
                             <svg fill="#27c9b8" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6">
                                 <path d="M21 21l-5.2-5.2"></path>
@@ -116,7 +121,7 @@ const Blogs = (props) => {
                         return !isLoading &&
                             (
                                 <React.Fragment key={index}>
-                                    <h2 className="font-bold text-2xl text-white md:mt-20 mt-24 py-2 px-2 rounded-xl w-40 text-center border-y-2 border-y-teal-400 border-x-2 border-x-teal-900 hover:bg-slate-600 cursor-pointer">{category}</h2>
+                                    <h2 className="font-bold text-2xl text-white md:mt-24 py-2 px-2 rounded-xl w-40 text-center border-y-2 border-y-teal-400 border-x-2 border-x-teal-900 hover:bg-slate-600 cursor-pointer">{category}</h2>
                                     {
                                         blogPosts?.items?.filter((blogItem) => {
                                             return blogItem?.author?.displayName === category && didSearchIncludes(blogItem?.title, new Date(blogItem?.published).toDateString(), category)
